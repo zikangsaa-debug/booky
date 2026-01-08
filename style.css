@@ -1,210 +1,270 @@
-/* =========================
-   RESET & GLOBAL
-========================= */
-* {
+/* ----------------- HEADER ----------------- */
+.site-header { width: 100%; padding: 0px 50px; display: flex; align-items: center; background-color: #cff2d9; /* light green eco background */ box-shadow: 0 2px 5px rgba(0,0,0,0.1); box-sizing: border-box;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    height: 110px;
+    width: auto;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-name {
+    font-size: 26px; /* larger & more readable */
     margin: 0;
-    padding: 0;
+    font-weight: 700;
+    color: #2f7a4d; /* eco dark green accent */
+    font-family: 'Georgia', serif;
+}
+
+.tagline {
+    font-size: 16px;
+    margin: 4px 0 0 0;
+    color: #555; /* soft neutral for tagline */
+    font-style: italic;
+}
+
+/* ----------------- HERO ----------------- */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background-image: url("bookmark.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 80px;
+    margin-top: 20px;
     box-sizing: border-box;
 }
 
-body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: linear-gradient(to bottom, #f4f8f3, #ffffff);
-    color: #2e2e2e;
-    line-height: 1.7;
+.hero-overlay {
+    max-width: 500px;
+    text-align: right;
+    color: #ffffff;
+    background: rgba(98, 167, 126, 0.65); /* semi-transparent overlay */
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
-/* =========================
-   HERO / HEADER
-========================= */
-header {
-    background: linear-gradient(135deg, #5fae63, #3d8b40);
-    color: white;
-    text-align: center;
-    padding: 90px 20px;
-    position: relative;
+.hero-title {
+    font-size: 50px;
+    margin: 0 0 20px 0;
+    font-weight: bold;
+    font-family: 'Georgia', serif;
+    line-height: 1.2;
 }
 
-header h1 {
-    font-size: 46px;
-    letter-spacing: 1px;
-    margin-bottom: 12px;
+.hero-tagline {
+    font-size: 28px;
+    font-family: 'Cursive', 'Brush Script MT', sans-serif;
+    margin: 0 0 30px 0;
+    font-weight: 500;
 }
 
-header p {
-    font-size: 20px;
-    opacity: 0.95;
+.hero-button {
+    background-color: #2f7a4d;
+    color: #fff;
+    padding: 16px 36px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
 
-/* decorative wave */
-header::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 40px;
-    background: #f4f8f3;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-}
-
-/* =========================
-   SECTION LAYOUT
-========================= */
-section {
-    max-width: 1100px;
-    margin: auto;
-    padding: 70px 25px;
-}
-
-h2 {
-    color: #3d8b40;
-    font-size: 30px;
-    margin-bottom: 25px;
-    position: relative;
-}
-
-h2::after {
-    content: "";
-    width: 60px;
-    height: 4px;
-    background: #6fbf73;
-    display: block;
-    margin-top: 8px;
-    border-radius: 5px;
-}
-
-/* =========================
-   CARD STYLE
-========================= */
-.card {
-    background: white;
-    padding: 35px;
-    border-radius: 18px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    margin-bottom: 40px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
-}
-
-/* =========================
-   FEATURES GRID
-========================= */
-.features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 25px;
-    margin-top: 40px;
-}
-
-.feature-box {
-    background: linear-gradient(145deg, #eaf6ea, #ffffff);
-    padding: 30px 20px;
-    border-radius: 16px;
-    text-align: center;
-    font-size: 17px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.06);
-    transition: transform 0.3s ease;
-}
-
-.feature-box:hover {
+.hero-button:hover {
+    background-color: #4ca06a;
     transform: scale(1.05);
 }
 
-/* =========================
-   LISTS
-========================= */
-ul {
-    margin-left: 20px;
+/* ----------------- GENERAL CARDS ----------------- */
+.card {
+    background-color: #ffffff; /* clean white card */
+    padding: 40px;
+    margin: 50px auto;
+    max-width: 1000px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
-ul li {
-    margin-bottom: 12px;
+.card h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #2f7a4d;
+    font-family: 'Georgia', serif;
 }
 
-/* =========================
-   PRICING
-========================= */
-.price {
-    font-size: 38px;
-    font-weight: bold;
-    color: #2e7d32;
-    margin-bottom: 15px;
+.card p, .card li {
+    font-size: 18px;
+    color: #444;
+    line-height: 1.6;
 }
 
-/* =========================
-   TESTIMONIAL TEXT
-========================= */
-.card p {
-    margin-bottom: 12px;
+/* ----------------- FEATURES ----------------- */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
 }
 
-/* =========================
-   CALL TO ACTION
-========================= */
-.cta {
-    background: linear-gradient(135deg, #4caf50, #2e7d32);
-    color: white;
+.feature-box {
+    background: #f9f9f9; /* subtle neutral background */
+    padding: 25px;
+    border-radius: 12px;
+    width: 180px;
     text-align: center;
-    padding: 80px 30px;
-    border-radius: 25px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #2f7a4d;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* ----------------- PACKAGE SECTION ----------------- */
+.package {
+    margin-top: 30px;
+}
+
+.package img {
+    width: 220px;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.package img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ----------------- CTA BUTTON ----------------- */
+.cta {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #fdfdfd;
 }
 
 .cta h2 {
-    color: white;
+    font-size: 32px;
+    color: #2f7a4d;
+    margin-bottom: 15px;
 }
 
 .cta p {
     font-size: 20px;
     margin-bottom: 30px;
+    color: #555;
 }
 
 .cta button {
-    background: white;
-    color: #2e7d32;
+    background-color: #2f7a4d;
+    color: #fff;
+    padding: 16px 40px;
     border: none;
-    padding: 16px 45px;
-    font-size: 18px;
+    border-radius: 50px;
+    font-size: 20px;
     font-weight: bold;
-    border-radius: 40px;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .cta button:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    background-color: #4ca06a;
+    transform: scale(1.05);
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* ----------------- FOOTER ----------------- */
 footer {
-    background: #1b5e20;
-    color: #e8f5e9;
     text-align: center;
-    padding: 25px;
-    font-size: 14px;
+    padding: 40px 20px;
+    background-color: #e3faea;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+footer p {
+    font-size: 16px;
+    color: #444;
+}
+
+/* ----------------- CUSTOMER IMAGES ----------------- */
+.customer-images .image-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+
+.customer-images img {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.customer-images img:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* ----------------- RESPONSIVE ----------------- */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 34px;
+    .site-header {
+        padding: 10px 20px;
     }
-
-    h2 {
-        font-size: 26px;
+    .hero {
+        justify-content: center;
+        padding-right: 20px;
     }
-
-    .cta p {
-        font-size: 18px;
+    .hero-overlay {
+        text-align: center;
+        max-width: 90%;
+        padding: 30px;
+    }
+    .hero-title {
+        font-size: 36px;
+    }
+    .hero-tagline {
+        font-size: 22px;
+    }
+    .product-name {
+        font-size: 20px;
+    }
+    .tagline {
+        font-size: 14px;
+    }
+    .features {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .package img {
+        width: 90%;
+    }
+    .customer-images img {
+        max-width: 90%;
     }
 }
