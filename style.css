@@ -1,0 +1,210 @@
+/* =========================
+   RESET & GLOBAL
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(to bottom, #f4f8f3, #ffffff);
+    color: #2e2e2e;
+    line-height: 1.7;
+}
+
+/* =========================
+   HERO / HEADER
+========================= */
+header {
+    background: linear-gradient(135deg, #5fae63, #3d8b40);
+    color: white;
+    text-align: center;
+    padding: 90px 20px;
+    position: relative;
+}
+
+header h1 {
+    font-size: 46px;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+header p {
+    font-size: 20px;
+    opacity: 0.95;
+}
+
+/* decorative wave */
+header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: #f4f8f3;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
+/* =========================
+   SECTION LAYOUT
+========================= */
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 70px 25px;
+}
+
+h2 {
+    color: #3d8b40;
+    font-size: 30px;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+h2::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background: #6fbf73;
+    display: block;
+    margin-top: 8px;
+    border-radius: 5px;
+}
+
+/* =========================
+   CARD STYLE
+========================= */
+.card {
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    margin-bottom: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+   FEATURES GRID
+========================= */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.feature-box {
+    background: linear-gradient(145deg, #eaf6ea, #ffffff);
+    padding: 30px 20px;
+    border-radius: 16px;
+    text-align: center;
+    font-size: 17px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+   LISTS
+========================= */
+ul {
+    margin-left: 20px;
+}
+
+ul li {
+    margin-bottom: 12px;
+}
+
+/* =========================
+   PRICING
+========================= */
+.price {
+    font-size: 38px;
+    font-weight: bold;
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+
+/* =========================
+   TESTIMONIAL TEXT
+========================= */
+.card p {
+    margin-bottom: 12px;
+}
+
+/* =========================
+   CALL TO ACTION
+========================= */
+.cta {
+    background: linear-gradient(135deg, #4caf50, #2e7d32);
+    color: white;
+    text-align: center;
+    padding: 80px 30px;
+    border-radius: 25px;
+}
+
+.cta h2 {
+    color: white;
+}
+
+.cta p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.cta button {
+    background: white;
+    color: #2e7d32;
+    border: none;
+    padding: 16px 45px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background: #1b5e20;
+    color: #e8f5e9;
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 34px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .cta p {
+        font-size: 18px;
+    }
+}
