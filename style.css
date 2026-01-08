@@ -1,170 +1,4 @@
-/* ----------------- HEADER ----------------- */
-.site-header { width: 100%; padding: 0px 50px; display: flex; align-items: center; background-color: #cff2d9; /* light green eco background */ box-shadow: 0 2px 5px rgba(0,0,0,0.1); box-sizing: border-box;
-}
-
-.header-left {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.logo {
-    height: 110px;
-    width: auto;
-}
-
-.header-text {
-    display: flex;
-    flex-direction: column;
-}
-
-.product-name {
-    font-size: 26px; /* larger & more readable */
-    margin: 0;
-    font-weight: 700;
-    color: #2f7a4d; /* eco dark green accent */
-    font-family: 'Georgia', serif;
-}
-
-.tagline {
-    font-size: 16px;
-    margin: 4px 0 0 0;
-    color: #555; /* soft neutral for tagline */
-    font-style: italic;
-}
-
-/* ----------------- HERO ----------------- */
-.hero {
-    position: relative;
-    width: 100%;
-    height: 80vh;
-    background-image: url("bookmark.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-right: 80px;
-    margin-top: 20px;
-    box-sizing: border-box;
-}
-
-.hero-overlay {
-    max-width: 500px;
-    text-align: right;
-    color: #ffffff;
-    background: rgba(98, 167, 126, 0.65); /* semi-transparent overlay */
-    padding: 50px;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-}
-
-.hero-title {
-    font-size: 50px;
-    margin: 0 0 20px 0;
-    font-weight: bold;
-    font-family: 'Georgia', serif;
-    line-height: 1.2;
-}
-
-.hero-tagline {
-    font-size: 28px;
-    font-family: 'Cursive', 'Brush Script MT', sans-serif;
-    margin: 0 0 30px 0;
-    font-weight: 500;
-}
-
-.hero-button {
-    background-color: #2f7a4d;
-    color: #fff;
-    padding: 16px 36px;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 50px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.hero-button:hover {
-    background-color: #4ca06a;
-    transform: scale(1.05);
-}
-
-/* ----------------- GENERAL CARDS ----------------- */
-.card {
-    background-color: #ffffff; /* clean white card */
-    padding: 40px;
-    margin: 50px auto;
-    max-width: 1000px;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-}
-
-.card h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #2f7a4d;
-    font-family: 'Georgia', serif;
-}
-
-.card p, .card li {
-    font-size: 18px;
-    color: #444;
-    line-height: 1.6;
-}
-
-/* ----------------- FEATURES ----------------- */
-.features {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 30px;
-}
-
-.feature-box {
-    background: #f9f9f9; /* subtle neutral background */
-    padding: 25px;
-    border-radius: 12px;
-    width: 180px;
-    text-align: center;
-    font-weight: 600;
-    font-size: 16px;
-    color: #2f7a4d;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.feature-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-}
-
-/* ----------------- PACKAGE SECTION ----------------- */
-.package {
-    margin-top: 30px;
-}
-
-.package img {
-    width: 220px;
-    height: auto;
-    margin-bottom: 15px;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.package img:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
-
-/* ----------------- CTA BUTTON ----------------- */
-.cta {
-    text-align: center;
-    padding: 60px 20px;
-    background-color: #fdfdfd;/* ----------------- GENERAL ----------------- */
+/* ----------------- GENERAL ----------------- */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -181,23 +15,23 @@ body {
 /* ----------------- HEADER ----------------- */
 .site-header {
     width: 100%;
-    padding: 20px 50px;
     display: flex;
-    align-items: center;
     justify-content: center;
     background-color: #cff2d9;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
 }
 
 .header-left {
     display: flex;
     align-items: center;
     gap: 15px;
+    max-width: 100%;
 }
 
 .logo {
-    height: 110px;
-    width: auto;
+    max-width: 120px;
+    height: auto;
 }
 
 .header-text {
@@ -207,7 +41,6 @@ body {
 
 .product-name {
     font-size: 26px;
-    font-weight: 700;
     color: #2f7a4d;
     font-family: 'Georgia', serif;
 }
@@ -221,16 +54,17 @@ body {
 /* ----------------- HERO ----------------- */
 .hero {
     width: 100%;
-    background: url("bookmark.jpg") center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 40px 20px;
+    background: url("bookmark.jpg") no-repeat center center;
+    background-size: cover;
 }
 
 .hero-overlay {
     background: rgba(98, 167, 126, 0.65);
-    padding: 40px;
+    padding: 30px;
     border-radius: 15px;
     text-align: center;
     color: #fff;
@@ -239,37 +73,36 @@ body {
 
 .hero-title {
     font-size: 50px;
-    font-family: 'Georgia', serif;
     margin-bottom: 20px;
+    font-family: 'Georgia', serif;
 }
 
 .hero-tagline {
     font-size: 28px;
+    margin-bottom: 20px;
     font-family: 'Cursive', 'Brush Script MT', sans-serif;
-    margin-bottom: 30px;
 }
 
 .hero-button {
     background-color: #2f7a4d;
     color: #fff;
-    padding: 16px 36px;
+    padding: 14px 30px;
     border-radius: 50px;
-    text-decoration: none;
     font-weight: bold;
     font-size: 18px;
-    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .hero-button:hover {
     background-color: #4ca06a;
-    transform: scale(1.05);
 }
 
 /* ----------------- CARDS ----------------- */
 .card {
     background-color: #fff;
     padding: 40px;
-    margin: 50px auto;
+    margin: 40px auto;
     max-width: 1000px;
     border-radius: 15px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.08);
@@ -279,7 +112,6 @@ body {
     font-size: 28px;
     color: #2f7a4d;
     margin-bottom: 20px;
-    font-family: 'Georgia', serif;
 }
 
 .card p, .card li {
@@ -291,27 +123,19 @@ body {
 .features {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 20px;
+    justify-content: center;
     margin-top: 30px;
 }
 
 .feature-box {
+    width: 180px;
     background: #f9f9f9;
+    text-align: center;
     padding: 25px;
     border-radius: 12px;
-    width: 180px;
-    text-align: center;
-    font-weight: 600;
-    font-size: 16px;
     color: #2f7a4d;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.feature-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
 /* ----------------- PACKAGE ----------------- */
@@ -321,15 +145,10 @@ body {
 }
 
 .package img {
-    width: 220px;
+    width: 100%;
+    max-width: 220px;
     border-radius: 12px;
     margin-bottom: 15px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.package img:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 /* ----------------- CTA ----------------- */
@@ -339,16 +158,8 @@ body {
     background-color: #fdfdfd;
 }
 
-.cta h2 {
-    font-size: 32px;
-    color: #2f7a4d;
-    margin-bottom: 15px;
-}
-
-.cta p {
-    font-size: 20px;
-    margin-bottom: 30px;
-}
+.cta h2 { color: #2f7a4d; font-size: 32px; margin-bottom: 15px; }
+.cta p { font-size: 20px; margin-bottom: 30px; }
 
 .cta button {
     background-color: #2f7a4d;
@@ -358,25 +169,6 @@ body {
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.cta button:hover {
-    background-color: #4ca06a;
-    transform: scale(1.05);
-}
-
-/* ----------------- FOOTER ----------------- */
-footer {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #e3faea;
-    box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
-}
-
-footer p {
-    font-size: 16px;
-    color: #444;
 }
 
 /* ----------------- CUSTOMER IMAGES ----------------- */
@@ -384,25 +176,25 @@ footer p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 25px;
+    gap: 20px;
 }
 
 .customer-images img {
     width: 100%;
-    max-width: 650px;
+    max-width: 600px;
     border-radius: 15px;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.customer-images img:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+/* ----------------- FOOTER ----------------- */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #e3faea;
 }
 
 /* ----------------- RESPONSIVE ----------------- */
 @media (max-width: 768px) {
 
-    /* Header */
     .site-header {
         flex-direction: column;
         padding: 10px 20px;
@@ -415,18 +207,7 @@ footer p {
     }
 
     .logo {
-        height: 90px;
-    }
-
-    .header-text {
-        text-align: center;
-    }
-
-    /* Hero */
-    .hero {
-        flex-direction: column;
-        padding: 20px;
-        height: auto;
+        max-width: 90px;
     }
 
     .hero-overlay {
@@ -434,137 +215,12 @@ footer p {
         padding: 20px;
     }
 
-    .hero-title {
-        font-size: 36px;
-    }
+    .hero-title { font-size: 32px; }
+    .hero-tagline { font-size: 20px; }
 
-    .hero-tagline {
-        font-size: 22px;
-    }
+    .features { flex-direction: column; gap: 15px; }
+    .feature-box { width: 100%; max-width: 300px; }
 
-    /* Features */
-    .features {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .feature-box {
-        width: 100%;
-        max-width: 300px;
-    }
-
-    /* Packages */
-    .package img {
-        width: 90%;
-    }
-
-    /* Customer Images */
-    .customer-images img {
-        max-width: 90%;
-    }
-
-}
-
-}
-
-.cta h2 {
-    font-size: 32px;
-    color: #2f7a4d;
-    margin-bottom: 15px;
-}
-
-.cta p {
-    font-size: 20px;
-    margin-bottom: 30px;
-    color: #555;
-}
-
-.cta button {
-    background-color: #2f7a4d;
-    color: #fff;
-    padding: 16px 40px;
-    border: none;
-    border-radius: 50px;
-    font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.cta button:hover {
-    background-color: #4ca06a;
-    transform: scale(1.05);
-}
-
-/* ----------------- FOOTER ----------------- */
-footer {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #e3faea;
-    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
-}
-
-footer p {
-    font-size: 16px;
-    color: #444;
-}
-
-/* ----------------- CUSTOMER IMAGES ----------------- */
-.customer-images .image-stack {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    align-items: center;
-}
-
-.customer-images img {
-    width: 100%;
-    max-width: 650px;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.customer-images img:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-}
-
-/* ----------------- RESPONSIVE ----------------- */
-@media (max-width: 768px) {
-    .site-header {
-        padding: 10px 20px;
-    }
-    .hero {
-        justify-content: center;
-        padding-right: 20px;
-    }
-    .hero-overlay {
-        text-align: center;
-        max-width: 90%;
-        padding: 30px;
-    }
-    .hero-title {
-        font-size: 36px;
-    }
-    .hero-tagline {
-        font-size: 22px;
-    }
-    .product-name {
-        font-size: 20px;
-    }
-    .tagline {
-        font-size: 14px;
-    }
-    .features {
-        flex-direction: column;
-        gap: 20px;
-    }
-    .package img {
-        width: 90%;
-    }
-    .customer-images img {
-        max-width: 90%;
-    }
+    .package img { width: 90%; max-width: 220px; }
+    .customer-images img { width: 90%; max-width: 600px; }
 }
