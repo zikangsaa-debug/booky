@@ -150,6 +150,18 @@ body {
     border-radius: 12px;
     margin-bottom: 15px;
 }
+/* Remove bullets from package lists */
+.package ul {
+    list-style: none; /* removes the dots */
+    padding: 0;       /* remove default padding */
+    margin: 0;        /* remove default margin */
+}
+
+.package li {
+    margin-bottom: 8px; /* spacing between items */
+    font-size: 18px;
+}
+
 
 /* ----------------- CTA ----------------- */
 .cta {
@@ -184,6 +196,23 @@ body {
     max-width: 600px;
     border-radius: 15px;
 }
+
+/* ----------------- CERTIFICATES ----------------- */
+.certificates-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.certificates-container img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
 
 /* ----------------- FOOTER ----------------- */
 footer {
