@@ -152,15 +152,16 @@ body {
 }
 /* Remove bullets from package lists */
 .package ul {
-    list-style: none; /* removes the dots */
-    padding: 0;       /* remove default padding */
-    margin: 0;        /* remove default margin */
+    list-style: none !important; /* remove dots completely */
+    padding-left: 0 !important;  /* remove default padding on mobile */
+    margin: 0 !important;         /* remove default margin on mobile */
 }
 
 .package li {
     margin-bottom: 8px; /* spacing between items */
     font-size: 18px;
 }
+
 
 
 /* ----------------- CTA ----------------- */
