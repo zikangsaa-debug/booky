@@ -138,6 +138,23 @@ body {
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
+@media (max-width: 768px) {
+
+    .features {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center; /* <-- centers the feature boxes horizontally */
+    }
+
+    .feature-box {
+        width: 100%;
+        max-width: 300px;
+        text-align: center; /* ensure text inside box is centered */
+    }
+
+}
+
+
 /* ----------------- VIDEO CONTAINER ----------------- */
 .video-container {
     margin-top: 25px;
