@@ -138,6 +138,34 @@ body {
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
+/* ----------------- VIDEO CONTAINER ----------------- */
+.video-container {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    background-color: grey; /* black cover around the video */
+    padding: 10px;           /* some space around the video */
+    border-radius: 12px;
+}
+
+.video-container video {
+    height: 400px;       /* fixed smaller height */
+    width: auto;         /* keep original aspect ratio */
+    border-radius: 8px;
+    display: grey;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .video-container video {
+        height: 250px;  /* smaller height for phone */
+        width: auto;
+    }
+}
+
+
+
+
 /* ----------------- PACKAGE ----------------- */
 .package {
     margin-top: 30px;
