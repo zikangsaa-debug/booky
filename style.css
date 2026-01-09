@@ -213,6 +213,15 @@ body {
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .certificates-container img {
+        width: 90%;
+        max-width: 300px; /* reduce size for phone */
+    }
+}
+
+
 
 /* ----------------- FOOTER ----------------- */
 footer {
